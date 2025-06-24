@@ -60,6 +60,8 @@
       font-family: 'Montserrat', sans-serif;
       flex-direction: column;
       gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     section.server-info {
@@ -67,7 +69,6 @@
       border-radius: 20px;
       padding: 2rem;
       box-shadow: 0 0 25px rgba(172, 148, 255, 0.3);
-      max-width: 700px;
       width: 100%;
       transition: transform 0.4s ease;
       text-align: center;
@@ -136,6 +137,99 @@
       box-shadow: 0 1px #4b1f95 inset;
     }
 
+    /* --- Новый блок с карточками построек --- */
+    .memories-section {
+      width: 100%;
+      margin-top: 3rem;
+      padding: 0 1rem 3rem;
+    }
+
+    .memories-section h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      text-align: center;
+      color: #6b46c1;
+      margin-bottom: 2rem;
+    }
+
+    .memories-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .memory-card {
+      background: #f3ecff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(172, 148, 255, 0.25);
+      display: flex;
+      max-width: 400px;
+      width: 100%;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .memory-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 25px rgba(130, 94, 255, 0.5);
+    }
+
+    .memory-image {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .memory-content {
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .memory-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      color: #6b46c1;
+    }
+
+    .memory-description {
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      line-height: 1.4;
+    }
+
+    /* Адаптив */
+    @media (max-width: 600px) {
+      .memories-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .memory-card {
+        max-width: 100%;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .memory-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .memory-content {
+        padding: 1rem;
+      }
+    }
+
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -199,6 +293,84 @@
     </section>
 
     <button id="music-toggle">Включить музыку</button>
+
+    <section class="memories-section">
+      <h2>Наши воспоминания</h2>
+      <div class="memories-grid">
+        <article class="memory-card">
+          <img class="memory-image" src="ghasts.PNG" alt="Плаке плаке и Нормалдаке" />
+          <div class="memory-content">
+            <h3 class="memory-title">Плаке плаке и Нормалдаке</h3>
+            <p class="memory-description">Наши лучши хэппи гасты</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="eben.PNG" alt="ебень" />
+          <div class="memory-content">
+            <h3 class="memory-title">Ебень</h3>
+            <p class="memory-description">Наш раб, пока безработный</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="sakura.PNG" alt="Сакура" />
+          <div class="memory-content">
+            <h3 class="memory-title">Наша Сакура</h3>
+            <p class="memory-description">Такая сакура только рядом с нашим прекрасным домом</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="shluha.PNG" alt="Шлюха" />
+          <div class="memory-content">
+            <h3 class="memory-title">Шлюха</h3>
+            <p class="memory-description">Твой верный лошадь</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="bobbik1.PNG" alt="боббик" />
+          <div class="memory-content">
+            <h3 class="memory-title">Самый крутой лох в мире</h3>
+            <p class="memory-description">Ты мой мир и я только твой лох</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="bigdyadyas.PNG" alt="Большие дяди" />
+          <div class="memory-content">
+            <h3 class="memory-title">Большие дяди</h3>
+            <p class="memory-description">Помним, как в ладонь помещались</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="bobbik2.PNG" alt="боббик на охоте" />
+          <div class="memory-content">
+            <h3 class="memory-title">Пока никто не видит</h3>
+            <p class="memory-description">Мууамуамуа</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="bobbik3.PNG" alt="боббик крутой" />
+          <div class="memory-content">
+            <h3 class="memory-title">Бульбульмен</h3>
+            <p class="memory-description">Нюхает место где лежала жена</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <img class="memory-image" src="garden.PNG" alt="Двор" />
+          <div class="memory-content">
+            <h3 class="memory-title">Лучший двор лучшего дома</h3>
+            <p class="memory-description">А вон там я топился</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -211,7 +383,7 @@
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
-      heart.innerText = '❤';
+      heart.innerText = '💜';
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.fontSize = Math.random() * 2 + 1 + 'rem';
       document.body.appendChild(heart);
